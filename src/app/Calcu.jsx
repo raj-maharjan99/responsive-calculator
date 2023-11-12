@@ -16,9 +16,8 @@ function Calcu() {
     setText("");
     setResult("");
   };
-  const zeroValue = () => {
-    setText(0);
-    setResult(0);
+  const delOneByOne = () => {
+    setText(text.slice(0, -1));
   };
   const calculateResult = () => {
     const input = text.join("");
@@ -27,7 +26,7 @@ function Calcu() {
   return (
     <>
       {" "}
-      <div className=" m-auto bg-black w-[140px] h-[300px]  rounded-[20px] flex  flex-col justify-center items-center gap-1">
+      <div className=" m-auto mt-[50px] bg-black w-[140px] h-[300px]  rounded-[20px] flex  flex-col justify-center items-center gap-1">
         <header className="text-white flex justify-center gap-[15px] text-[10px] mb-[50px] "></header>
         <div className="w-[130px] text-white px-4 flex flex-col justify-around items-end ">
           <Input text={text} result={result} />
@@ -42,8 +41,8 @@ function Calcu() {
           <Button
             textColor="black"
             color="#A5A5A5"
-            symbol="+/-"
-            handleClick={addToText}
+            symbol="DEL"
+            handleClick={delOneByOne}
           />
           <Button
             textColor="black"
