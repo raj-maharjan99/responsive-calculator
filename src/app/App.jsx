@@ -12,7 +12,7 @@ function App() {
       {/* <Calculator /> */}
       {/* <FavouriteColor /> */}
       <Calcu />
-      <Calculator />
+      {/* <Calculator /> */}
     </>
   );
 }
